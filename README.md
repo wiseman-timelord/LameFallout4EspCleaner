@@ -5,7 +5,8 @@ Status: Beta - It seems to work, and I did some work in Claude Opus to ensure it
 Its lame becaue you have to give it full control, it must press enter on the active window when it pops up, and it assumes FO4Edit will be loaded within 3s, which it useually is, AND it only works in 1 thread, however its a means to an end for batch auto-cleaning Falout 4 Esps on Windows 7-8.1, because obviously if you are on Windows 10-11, then you should be using PACT.
 
 ## Requirements:
-- Powershell 5.1 - Find your powershell version by typing this in... powershell -nop -c "$PSVersionTable.PSVersion"
+- Powershell 5.1 - Find your powershell version by typing this in `powershell -nop -c "$PSVersionTable.PSVersion"`.
+- Fallout 4 + Mods - Obviously you need Fallout 4, and some significant number of mods installed, like 50+, to justify having to spend the time cleaning mods.
 
 ### Instructions:
 1) Put the extracted files in a sensible location/folder, then put, "FO4Edit 4.1.5f.zip" or some "FO4Edit*.zip", in the same folder as the scripts.
