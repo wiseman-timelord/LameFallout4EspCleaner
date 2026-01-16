@@ -1,0 +1,268 @@
+# FO4Edit Auto-Cleaner Ignore List
+# Generated: January 2026
+# 
+# This file contains ESM/ESP filenames that should NOT be auto-cleaned.
+# Lines starting with # are comments.
+# Wildcards (*) are supported for pattern matching.
+# Case-insensitive matching recommended.
+
+# ============================================
+# SECTION 1: CONFIRMED "DO NOT CLEAN" BY LOOT/AUTHORS
+# ============================================
+
+# Scrap Everything (all variants) - ITMs are intentional
+Scrap Everything - Ultimate Edition.esp
+Scrap Everything - Core.esp
+Scrap Everything.esp
+Scrap Everything - Automatron.esp
+Scrap Everything - Far Harbor.esp
+Scrap Everything - Nuka World.esp
+Scrap Everything - Vault-Tec Workshop.esp
+Scrap Everything*.esp
+
+# Armorsmith Extended - ITMs protect armor slots
+Armorsmith Extended.esp
+
+# ============================================
+# SECTION 2: FALLOUT LONDON (Total Conversion)
+# ============================================
+
+LondonWorldSpace.esm
+LondonWorldSpace-DLCBlock.esp
+BakaFramework.esm
+UFO4P FOLON.esp
+CFM FOLON.esp
+FOLON_Bren.esp
+FOLonVAFS.esp
+TransferSettlements.esp
+Fixed FOLON Creature Death Drops*.esp
+Realistic Reverb and Ambience - FL Patch.esp
+CraftingBench_Redux.esp
+Folon*.esp
+FOLON*.esp
+FOLON*.esm
+London*.esp
+London*.esm
+
+# ============================================
+# SECTION 3: FROST SURVIVAL SIMULATOR
+# ============================================
+
+FROST.esp
+Frost.esp
+aFrostMod.esp
+RedsFrostFixes.esp
+FrostNukaWorld.esp
+FROST_WorkshopPatch.esp
+FROSTfix.esp
+FROSTIntPR.esp
+FROSTExtPR.esp
+FROSTmoreDoors.esp
+FROSTMoreDoorConcealLocations.esp
+FROST*.esp
+
+# ============================================
+# SECTION 4: HORIZON OVERHAUL
+# ============================================
+
+Z_Horizon.esp
+Z_Horizon_*.esp
+Horizon.esp
+Horizon*.esp
+
+# ============================================
+# SECTION 5: SIM SETTLEMENTS
+# ============================================
+
+SS2.esm
+SS2*.esm
+SS2*.esp
+SimSettlements.esm
+SimSettlements.esp
+SimSettlements2.esm
+SimSettlements2.esp
+
+# ============================================
+# SECTION 6: FRAMEWORK/RESOURCE MODS
+# ============================================
+
+# Workshop/Settlement Frameworks
+WorkshopFramework.esm
+Workshop Plus.esp
+Workshop Framework.esm
+
+# Keyword Frameworks
+ArmorKeywords.esm
+AWKCR.esm
+Armor and Weapon Keywords.esm
+
+# HUD Frameworks
+HUDFramework.esm
+DEF_UI.esp
+DEF_UI*.esp
+FallUI*.esp
+MCM.esp
+Mod Configuration Menu.esp
+
+# Script/Memory Frameworks
+Buffout4.esp
+F4SE*.esp
+xSE PluginPreloader*.esp
+
+# ============================================
+# SECTION 7: UNOFFICIAL PATCHES
+# ============================================
+
+Unofficial Fallout 4 Patch.esp
+UFO4P.esp
+Unofficial*.esp
+
+# ============================================
+# SECTION 8: PRECOMBINE/PREVISIBINE MODS
+# ============================================
+
+PRP.esp
+PRP*.esp
+BostonFPSFix*.esp
+BostonFPSFixAIO.esp
+Previsibines*.esp
+Boston FPS Fix*.esp
+
+# ============================================
+# SECTION 9: WEATHER/LIGHTING MODS
+# ============================================
+
+NAC.esp
+NAC-FH.esp
+NAC-NW.esp
+NAC X*.esp
+NAC*.esp
+TrueStorms*.esp
+True Storms*.esp
+Vivid Weathers*.esp
+Polluted Climate*.esp
+Clarity.esp
+
+# ============================================
+# SECTION 10: MAJOR QUEST MODS
+# ============================================
+
+# Thuggysmurf's Series
+Depravity.esp
+Outcasts and Remnants.esp
+Project Valkyrie.esp
+Fusion City Rising.esp
+
+# Other Major Quest Mods
+Tales from the Commonwealth.esp
+Atomic Radio.esp
+Maxwell's World.esp
+America Rising*.esp
+The Machine and Her.esp
+Heather Casdin.esp
+Miami Misadventures*.esp
+
+# ============================================
+# SECTION 11: CREATURE/NPC OVERHAULS
+# ============================================
+
+[ARR] FallEvil*.esp
+FallEvil*.esp
+Zombie Walkers.esp
+Feral Ghoul Expansion Pack.esp
+Better Settlers.esp
+Settlers of the Commonwealth.esp
+Unique NPCs*.esp
+NPCs Travel.esp
+FGEP*.esp
+
+# ============================================
+# SECTION 12: BODY/CHARACTER MODS
+# ============================================
+
+CBBE.esp
+BodyTalk*.esp
+LooksMenu.esp
+LooksMenu Customization Compendium.esp
+Bodyslide*.esp
+TBOS*.esp
+ZeX*.esp
+
+# ============================================
+# SECTION 13: OFFICIAL BETHESDA FILES
+# (Recommended to handle separately/manually)
+# ============================================
+
+# Base Game (NEVER clean)
+Fallout4.esm
+
+# DLC Files (controversial - skip for safety)
+DLCRobot.esm
+DLCworkshop01.esm
+DLCCoast.esm
+DLCworkshop02.esm
+DLCworkshop03.esm
+DLCNukaWorld.esm
+DLCUltraHighResolution.esm
+
+# Creation Club (generally okay to clean, but skip for safety)
+cc*.esl
+cc*.esm
+ccBGS*.esp
+ccBGS*.esl
+
+# ============================================
+# SECTION 14: ANIMATION/SKELETON MODS
+# ============================================
+
+Skeleton*.esp
+*Skeleton*.esp
+AAF*.esp
+Animation*.esm
+
+# ============================================
+# SECTION 15: OTHER FRAMEWORK DEPENDENCIES
+# ============================================
+
+# Papyrus/Script Libraries
+Papyrus Common Library.esp
+PCL*.esp
+
+# Patcher/Generated Files
+RobCo Patcher*.esp
+Bashed Patch*.esp
+Merged Patch*.esp
+Smashed Patch*.esp
+zPatch*.esp
+
+# Place Everywhere (complex cell edits)
+Place Everywhere.esp
+PlaceEverywhere.esp
+
+# Spring Cleaning (scrapping mod)
+Spring Cleaning.esp
+SpringCleaning.esp
+
+# ============================================
+# SECTION 16: ADDITIONAL SAFETY PATTERNS
+# ============================================
+
+# Any ESM file (master files are risky to clean)
+*.esm
+
+# Files containing "Patch" (often hand-crafted conflict resolution)
+*Patch*.esp
+
+# Files containing "Fix" (often intentional overrides)
+*Fix*.esp
+*Fixes*.esp
+
+# Files containing "Overhaul" (major changes)
+*Overhaul*.esp
+
+# Files containing "Framework" 
+*Framework*.esp
+*Framework*.esm
+
+# Files containing "Unofficial"
+Unofficial*.esp
