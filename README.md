@@ -1,5 +1,5 @@
 # LameFallout4EspCleaner
-Status: Alpha - It seems to work, but, its not been developed and not sure if its safe (certain esps possibly shouldnt be cleaned).
+Status: Beta - It seems to work, and I did some work in Claude Opus to ensure its safe, and the game loads, but possibly it can be improved.
 
 ### Description:
 Its lame becaue you have to give it full control, it must press enter on the active window when it pops up, and it assumes FO4Edit will be loaded within 3s, which it useually is, AND it only works in 1 thread, however its a means to an end for batch auto-cleaning Falout 4 Esps on Windows 7-8.1, because obviously if you are on Windows 10-11, then you should be using PACT.
