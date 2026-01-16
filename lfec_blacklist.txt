@@ -1,0 +1,105 @@
+2026-01-16	22LR_SilentPistol_ENG.esp	True True
+2026-01-16	3dscopes-9x39project.esp	True True
+2026-01-16	3dscopes-defensegun.esp	True True
+2026-01-16	3dscopes-fnfal.esp	True True
+2026-01-16	3dscopes-laer.esp	True True
+2026-01-16	3dscopes-mosin.esp	True True
+2026-01-16	3dscopes-replacer.esp	True True
+2026-01-16	3dscopes-replacer-cowboyrepeater.esp	True True
+2026-01-16	3dscopes-replacer-g3family.esp	True True
+2026-01-16	3dscopes-replacer-gyrojet.esp	True True
+2026-01-16	3dscopes-replacer-hamr.esp	True True
+2026-01-16	3dscopes-replacer-holorifle.esp	True True
+2026-01-16	3dscopes-replacer-leeenfield.esp	True True
+2026-01-16	9mmPistol.esp	True True
+2026-01-16	9x39Project.esp	True True
+2026-01-16	AddEnemyFootstepSound.esp	True True
+2026-01-16	AK74M.esp	True True
+2026-01-16	AKMnv.esp	True True
+2026-01-16	Ambient Wasteland.esp	True True
+2026-01-16	American180nv.esp	True True
+2026-01-16	American180nv_LoreFriendly.esp	True True
+2026-01-16	Animated Drinking.esp	True True
+2026-01-16	AnimatedIngestibles.esp	True True
+2026-01-16	AnimatedRadaway.esp	True True
+2026-01-16	AnimChemRedux.esp	True True
+2026-01-16	AUG-A1.esp	True True
+2026-01-16	AUG-A1_LoreFriendly.esp	True True
+2026-01-16	Auto Drink and Eat by Iztari.esp	True True
+2026-01-16	Backpacks of the Commonwealth.esp	True True
+2026-01-16	BerettaM9FS.esp	True True
+2026-01-16	Better Manufacturing - Manufacturing Extended Additions.esp	True True
+2026-01-16	Better Manufacturing.esp	True True
+2026-01-16	BetterJunkFences.esp	True True
+2026-01-16	BlockingOverhaul.esp	True True
+2026-01-16	BottelingWater.esp	True True
+2026-01-16	CAWS.esp	True True
+2026-01-16	CAWS_LoreFriendly.esp	True True
+2026-01-16	CBBE.esp	True True
+2026-01-16	CFM FOLON.esp	True True
+2026-01-16	Chemfluence AI Combat Dynamics.esp	True True
+2026-01-16	Children Extended.esp	True True
+2026-01-16	ChinaLake_Extended.esp	True True
+2026-01-16	ChinaLakeandHolorifle.esp	True True
+2026-01-16	Clean Water - Clean.esp	True True
+2026-01-16	CompanionStatus.esp	True True
+2026-01-16	console.esp	True True
+2026-01-16	CraftingBench_Redux.esp	True True
+2026-01-16	Cranky.esp	True True
+2026-01-16	Cranky_LoreFriendly.esp	True True
+2026-01-16	CWToolPack.esp	True True
+2026-01-16	DamageReaction.esp	True True
+2026-01-16	Dank_9x39.esp	True True
+2026-01-16	Dank_AK74M.esp	True True
+2026-01-16	Dank_AKMComplex.esp	True True
+2026-01-16	Dank_Factor.esp	True True
+2026-01-16	Dank_FAMAS.esp	True True
+2026-01-16	Dank_G36.esp	True True
+2026-01-16	Dank_KrissVector.esp	True True
+2026-01-16	Dank_M1928A1.esp	True True
+2026-01-16	Dank_MK18.esp	True True
+2026-01-16	Dank_MP7.esp	True True
+2026-01-16	Dank_ServiceRifle.esp	True True
+2026-01-16	Dank_UMP.esp	True True
+2026-01-16	Dank_XM2010.esp	True True
+2026-01-16	DesertEagleNV.esp	True True
+2026-01-16	DesertEagleNV_LoreFriendly.esp	True True
+2026-01-16	DX Commonwealth Mini Dresses.esp	True True
+2026-01-16	EFF.esp	True True
+2026-01-16	ElMudoStore.esp	True True
+2026-01-16	Elzee Human Grab Attacks.esp	True True
+2026-01-16	EM2.esp	True True
+2026-01-16	EM2_LoreFriendly.esp	True True
+2026-01-16	ETA1_0b-ExtraTurretAmmob.esp	True True
+2026-01-16	F4CW10mmSMG.esp	True True
+2026-01-16	F4NVServiceRifleRedux.esp	True True
+2026-01-16	Factor.esp	True True
+2026-01-16	Fast Travel From Interiors Main + DLCs.esp	True True
+2026-01-16	Faster Terminal Displays (20x).esp	True True
+2026-01-16	Feral Ghoul Bite Skills.esp	True True
+2026-01-16	Fixed FOLON Creature Death Drops-twiz.esp	True True
+2026-01-16	FOLON_Bren.esp	True True
+2026-01-16	FOLonVAFS.esp	True True
+2026-01-16	G11.esp	True True
+2026-01-16	G11_LoreFriendly.esp	True True
+2026-01-16	G36Complex.esp	True True
+2026-01-16	G3Family.esp	True True
+2026-01-16	GIAT_FAMAS.esp	True True
+2026-01-16	Give Me That Bottle.esp	True True
+2026-01-16	GreaseGunSMG.esp	True True
+2026-01-16	GreaseGunSMG_LoreFriendly.esp	True True
+2026-01-16	HAAS Automatron Replacer AE Edition.esp	True True
+2026-01-16	HAAS Core Replacer AE Edition.esp	True True
+2026-01-16	HAAS Far Harbor Replacer AE Edition.esp	True True
+2026-01-16	HAAS Nuka World Replacer AE Edition.esp	True True
+2026-01-16	HandmadeAntiMat.esp	True True
+2026-01-16	HandmadeAntiMat_LoreFriendly.esp	True True
+2026-01-16	HandmadeAntiMaterielRifle.esp	True True
+2026-01-16	HandmadeLeverActionSG.esp	True True
+2026-01-16	HandmadeLeverActionSG_LoreFriendly.esp	True True
+2026-01-16	HandmadeSMG.esp	True True
+2026-01-16	HandmadeSMG_LoreFriendly.esp	True True
+2026-01-16	HeadWounds.esp	True True
+2026-01-16	HeavySelectShotgun.esp	True True
+2026-01-16	HK_MP5.esp	True True
+2026-01-16	HK_UMP.esp	True True
