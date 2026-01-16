@@ -7,6 +7,7 @@ Its lame becaue you have to give it full control, it must press enter on the act
 ## Requirements:
 - Powershell 5.1 - Find your powershell version by typing this in `powershell -nop -c "$PSVersionTable.PSVersion"`.
 - Fallout 4 + Mods - Obviously you need Fallout 4, and some significant number of mods installed, like 50+, to justify having to spend the time cleaning mods.
+- FO4Edit - Get it from here... https://www.nexusmods.com/fallout4/mods/2737
 
 ### Instructions:
 1) Put the extracted files in a sensible location/folder, then put, "FO4Edit 4.1.5f.zip" or some "FO4Edit*.zip", in the same folder as the scripts.
