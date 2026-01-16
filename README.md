@@ -10,7 +10,7 @@ Its lame becaue you have to give it full control, it must press enter on the act
 3) Returning to the batch menu, run the main program, at which point the auto-cleaner will start. 
 
 ### Notation:
-- You are advised to play a 1-2hr movie on the second display if you have one, then run the main program, allowing the autoclean to do its thing, or otherwise on single monitor computer, do some chors/housework leaving the machine alone to work. Worst case scenario it will be pressing enter on other focused windows, and not have pressed enter in autoclean, halting the process.
+- You are advised to play a 1-2hr movie on the second display if you have one, then run the main program on primary display, allowing the autoclean to do its thing, or otherwise on single monitor computer, do some chors/housework leaving the machine alone to work. Worst case scenario it will be pressing enter on other focused windows, and not have pressed enter in autoclean, halting the process.
 
 ## Development:
 This program may be improved upon later.
