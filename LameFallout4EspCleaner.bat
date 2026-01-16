@@ -1,10 +1,11 @@
 @echo off
-:: Script `.\Fallout4EspCleaner.bat`
+:: Script `.\LameFallout4EspCleaner.bat`
 
 :: Constants
 set "GAME_TITLE=Fallout4"
-set "SETTINGS_FILE=fec_settings.psd1"
-set "INSTALLER_SCRIPT=fec_installer.ps1"
+set "SETTINGS_FILE=data\lfec_settings.psd1"
+set "INSTALLER_SCRIPT=lfec_installer.ps1"
+set "AUTOCLEANER_EXE=FO4EditQuickAutoClean.exe"
 
 :: admin check
 net session >nul 2>&1 || (
@@ -15,8 +16,9 @@ net session >nul 2>&1 || (
 :: cd to script dir
 pushd "%~dp0"
 
-:: Create temp folder if it doesn't exist
+:: Create folders if they don't exist
 if not exist ".\temp" mkdir ".\temp"
+if not exist ".\data" mkdir ".\data"
 
 :MainMenu
 cls
@@ -27,7 +29,7 @@ goto :eof
 
 :Banner
 call :Bar
-echo      %GAME_TITLE% Esp Cleaner
+echo      %GAME_TITLE% Lame Fallout 4 Esp Cleaner
 call :Bar
 echo.
 echo.
@@ -75,18 +77,7 @@ if not exist "%SETTINGS_FILE%" (
     pause
     goto :MainMenu
 )
-
-:: Load settings and extract thread count
-call :LoadSettings
-if %ERRORLEVEL% neq 0 (
-    echo [ERROR] Failed to read configuration!
-    echo Please reconfigure the program.
-    echo.
-    pause
-    goto :MainMenu
-)
-
-echo [OK] Configuration loaded ^(%THREAD_COUNT% threads^)
+echo [OK] Configuration found
 timeout /t 1 >nul
 
 :: Verify PowerShell
@@ -96,50 +87,50 @@ if %ERRORLEVEL% neq 0 (
     goto :MainMenu
 )
 
-:: Verify GameDataPath from settings (replaces ..\Data check)
+:: Verify GameDataPath from settings
 call :CheckGameDataPath
 if %ERRORLEVEL% neq 0 (
     echo [ERROR] Game data path not found: %GAME_DATA_PATH%
-    echo Please check your %SETTINGS_FILE%.
+    echo Please run "Configure/Install Program" to fix settings.
     pause
     goto :MainMenu
 )
 echo [OK] Game data folder found
 timeout /t 1 >nul
 
-:: Verify thread installations
-call :VerifyThreads
-if %ERRORLEVEL% neq 0 (
-    echo [ERROR] Thread verification failed!
-    echo Please reconfigure the program.
+:: Verify Thread1 installation
+if not exist ".\Thread1\%AUTOCLEANER_EXE%" (
+    echo [ERROR] Missing %AUTOCLEANER_EXE% in Thread1 folder
+    echo Please run "Configure/Install Program" to fix this issue.
     pause
     goto :MainMenu
 )
+echo [OK] Thread1 verified
+timeout /t 1 >nul
 
-:: Create blacklist if needed (keep in root as it's persistent data)
-if not exist "fec_blacklist.txt" type nul >"fec_blacklist.txt"
+:: Create blacklist if needed
+if not exist ".\data\lfec_blacklist.txt" type nul >".\data\lfec_blacklist.txt"
 echo [OK] Blacklist ready
 timeout /t 1 >nul
 
-:: Comprehensive cleanup of old files
+:: Cleanup old temp files
 call :CleanupFiles
 echo [OK] Old files cleaned
 timeout /t 1 >nul
 
 :: PowerShell banner
 echo.
-echo Launching PowerShell script ^(%THREAD_COUNT% threads^)...
+echo Launching PowerShell script...
 
-:: Run script with thread count parameter
-"%PSCMD%" -NoP -EP Bypass -File "fec_program.ps1" -ThreadCount %THREAD_COUNT%
+:: Run program script
+"%PSCMD%" -NoP -EP Bypass -File "lfec_program.ps1"
 set "PS_EXIT_CODE=%ERRORLEVEL%"
 
-:: Post-execution cleanup (in case PowerShell didn't clean up properly)
+:: Post-execution cleanup
 call :CleanupFiles
-echo [OK] Post-execution cleanup done
-timeout /t 1 >nul
 
 if %PS_EXIT_CODE% neq 0 (
+    echo.
     echo [ERROR] PowerShell script failed with exit code %PS_EXIT_CODE%
     pause
     goto :MainMenu
@@ -165,7 +156,7 @@ if %ERRORLEVEL% neq 0 (
 :: Run PowerShell installer
 echo [INFO] Launching PowerShell installer...
 echo.
-"%PSCMD%" -NoP -EP Bypass -File ".\fec_installer.ps1"
+"%PSCMD%" -NoP -EP Bypass -File ".\lfec_installer.ps1"
 
 goto :MainMenu
 
@@ -180,14 +171,7 @@ timeout /t 5 >nul
 popd
 exit /b 0
 
-:: Skip Bar Bar
-goto :End
-
-:Bar
-echo ===============================================================================
-goto :eof
-
-:End
+:: Functions below
 
 :VerifyPowerShell
 set "PSCMD="
@@ -201,31 +185,6 @@ if not defined PSCMD (
 )
 echo [OK] PowerShell located
 timeout /t 1 >nul
-exit /b 0
-
-:LoadSettings
-:: Parse the PowerShell data file to extract ThreadCount
-setlocal enabledelayedexpansion
-set "THREAD_COUNT="
-for /f "usebackq tokens=1,2 delims== " %%A in ("%SETTINGS_FILE%") do (
-    if "%%A"=="ThreadCount" (
-        set "TEMP_COUNT=%%B"
-        set "TEMP_COUNT=!TEMP_COUNT: =!"
-        set "TEMP_COUNT=!TEMP_COUNT:'=!"
-        set "TEMP_COUNT=!TEMP_COUNT:"=!"
-    )
-)
-endlocal & set "THREAD_COUNT=%TEMP_COUNT%"
-if not defined THREAD_COUNT (
-    echo [ERROR] Could not read ThreadCount from %SETTINGS_FILE%
-    exit /b 1
-)
-:: Validate thread count is numeric
-set /a "TEST_COUNT=%THREAD_COUNT%" 2>nul
-if %TEST_COUNT% leq 0 (
-    echo [ERROR] Invalid ThreadCount in settings: %THREAD_COUNT%
-    exit /b 1
-)
 exit /b 0
 
 :CheckGameDataPath
@@ -251,42 +210,12 @@ if not exist "%GAME_DATA_PATH%" (
 )
 exit /b 0
 
-:VerifyThreads
-:: Check that all required thread directories exist with executables
-set "MISSING_THREADS="
-set "AUTOCLEANER_EXE=FO4EditQuickAutoClean.exe"
-call :LoadSettings >nul 2>&1 || exit /b 1
-
-for /L %%i in (1,1,%THREAD_COUNT%) do (
-    if not exist ".\Thread%%i\%AUTOCLEANER_EXE%" (
-        if defined MISSING_THREADS (
-            set "MISSING_THREADS=%MISSING_THREADS%, %%i"
-        ) else (
-            set "MISSING_THREADS=%%i"
-        )
-    )
-)
-
-if defined MISSING_THREADS (
-    echo [ERROR] Missing executables in Thread folders: %MISSING_THREADS%
-    echo Please run "Configure/Install Program" to fix this issue.
-    exit /b 1
-)
-
-echo [OK] All %THREAD_COUNT% thread^(s^) verified
-timeout /t 1 >nul
-exit /b 0
-
 :CleanupFiles
-:: Delete entire temp folder contents but preserve the folder
+:: Delete temp folder contents but preserve the folder
 if exist ".\temp" (
     del /q ".\temp\*" 2>nul
 )
-
-:: Clean up any thread-specific temp files in Thread directories
-for /L %%i in (1,1,16) do (
-    if exist ".\Thread%%i\*.tmp" del /q ".\Thread%%i\*.tmp" 2>nul
-    if exist ".\Thread%%i\FO4Edit_*.txt" del /q ".\Thread%%i\FO4Edit_*.txt" 2>nul
-)
-
+:: Clean up Thread1 temp files
+if exist ".\Thread1\*.tmp" del /q ".\Thread1\*.tmp" 2>nul
+if exist ".\Thread1\FO4Edit_*.txt" del /q ".\Thread1\FO4Edit_*.txt" 2>nul
 goto :eof
